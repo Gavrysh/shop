@@ -1,5 +1,5 @@
 <h3>Calc</h3>
-<form action="/index.php" method="get">
+<form action="" method="get">
     <label>First number<input type="text" name="val1"></label>
     <label>Second number<input type="text" name="val2"></label>
     <input type="submit" name="calc" value="Calc numbers">
