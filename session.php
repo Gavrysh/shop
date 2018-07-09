@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 //
 //var_dump(session_name());
 //
@@ -41,7 +41,7 @@
 //session_start();
 
 //Example 5
-$lifeTime = 2;
-session_set_cookie_params($lifeTime);
-session_start();
-var_dump(session_id());
+//$lifeTime = 2;
+//session_set_cookie_params($lifeTime);
+//session_start();
+//var_dump(session_id());
