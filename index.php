@@ -2,6 +2,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+require_once  __DIR__.'/vendor/autoload.php';
+
+use App\DB;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 if (empty($_GET)) {
     $page = 'main';
 } else {
@@ -23,3 +29,10 @@ if (empty($_GET)) {
 
 include_once './model/'.$page.'.php';
 include_once './view/main.tpl';
+
+$var = new DB();
+$var;
+
+$var1 = new Monolog\Logger('name');
+$var1->pushHandler(new StreamHandler(__DIR__.'/shop.log', Logger::WARNING));
+$var1->warning('Foo');
