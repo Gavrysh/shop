@@ -74,9 +74,6 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="/basket">Корзина</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="/calc">Калькулятор</a>
-                </li>
             </ul>
         </div>
     </div>
