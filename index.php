@@ -3,8 +3,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require_once './app/bootstrap.php';
 =======
+=======
+>>>>>>> RELEASE1
 require_once  __DIR__.'/vendor/autoload.php';
 
 use App\DB;
@@ -38,5 +41,9 @@ $var;
 
 $var1 = new Monolog\Logger('name');
 $var1->pushHandler(new StreamHandler(__DIR__.'/shop.log', Logger::WARNING));
+<<<<<<< HEAD
+$var1->warning('Foo');
+>>>>>>> RELEASE1
+=======
 $var1->warning('Foo');
 >>>>>>> RELEASE1
