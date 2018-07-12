@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: phpuser
- * Date: 12.07.18
- * Time: 13:06
- */
+class controller_products extends controller
+{
+    public function action_index()
+    {
+        $this->view->generate('products_view.tpl', 'template_view.tpl');
+    }
+}
