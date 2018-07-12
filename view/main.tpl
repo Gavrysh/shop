@@ -81,7 +81,9 @@
 
 <!-- Main container -->
 <div class="container">
-    <?php include_once './view/'.$page.'.tpl'; ?>
+    <div class="main-content">
+        <?php include_once './view/'.$page.'.tpl'; ?>
+    </div>
 </div> <!-- End Main container -->
 
 <!-- Footer -->
