@@ -29,7 +29,7 @@ class Route
         $actionName = 'action_'.$actionName;
 
         //додаємо файл із класом моделі (файл моделі може бути відсутній)
-        if (file_exists('./app/models/model_'.$controllerName.'.php')) {
+        if (file_exists('./app/models/'.$modelName.'.php')) {
             include './app/models/'.$modelName.'.php';
         }
 
