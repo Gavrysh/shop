@@ -43,4 +43,5 @@ class Route
         //визвано дію контролера або тут теж можна виключення організувати
         method_exists($controller, $action) ? $controller->$action() : Route::errorPage404();
     }
+
 }
