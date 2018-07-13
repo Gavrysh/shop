@@ -20,7 +20,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Вхід</h5>
+                <h5 class="modal-title" id="exampleModalCenterTitle">Вход</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -28,19 +28,19 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email адреса</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введіть email">
-                        <small id="emailHelp" class="form-text text-muted">Ваша email адреса не буде росповсюдживатись десь ще.</small>
+                        <label for="exampleInputEmail1">Email адрес</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой email">
+                        <small id="emailHelp" class="form-text text-muted">Ваш email адрес не будет распространяться где-то еще.</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Пароль</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введіть пароль">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Запам'ятати мене</label>
+                        <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Підтвердити</button>
+                    <button type="submit" class="btn btn-primary">Подтвердить</button>
                 </form>
             </div>
         </div>
@@ -56,20 +56,23 @@
         <a class="navbar-brand" href="/"><img src="/img/logo_s.png"></a>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Головна<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/products">Каталог товарів</a>
+                <a class="nav-link" href="/products">Каталог книг</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/authors">Авторы книг</a>
             </li>
         </ul>
         <div class="my-2 my-lg-0 form-inline">
             <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Вхід</a>
+                    <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Вход</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="/basket">Корзина</a>
