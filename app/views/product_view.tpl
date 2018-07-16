@@ -5,7 +5,7 @@
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/img/book.png" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Наименование книги</h5>
+                    <h5 class="card-title"><?='Name'?></h5>
                     <p class="card-text">Краткое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis debitis eligendi error esse maxime nam nesciunt pariatur qui voluptatibus?</p>
                     <a href="#" class="btn btn-primary float-left">Купить</a>
                 </div>

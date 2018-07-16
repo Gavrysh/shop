@@ -1,5 +1,5 @@
 <?php
-class Model_products extends Model
+class Model_product extends Model
 {
     public function get_data()
     {

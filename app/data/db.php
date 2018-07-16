@@ -1,48 +1,66 @@
 <?php
 return [
-    'Маленька книга люке. Секрети найщасливіших людей світу' => [
+    [
+        'name' => 'Маленька книга люке. Секрети найщасливіших людей світу',
         'author' => 'Майк Викинг',
         'pages' => 288,
         'price' => 179.90,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Брехуни на кушетці. Психотерапевтичні оповіді' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Брехуни на кушетці. Психотерапевтичні оповіді',
         'author' => 'Ирвин Ялом',
         'pages' => 512,
         'price' => 120.00,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Маленька книга хюґе. Як жити добре по-данськи' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Маленька книга хюґе. Як жити добре по-данськи',
         'author' => 'Майк Викинг',
         'pages' => 288,
         'price' => 144.90,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Шопенгауер як ліки' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Шопенгауер як ліки',
         'author' => 'Ирвин Ялом',
         'pages' => 512,
         'price' => 120.00,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Гола економіка. Викриття нудної науки' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Гола економіка. Викриття нудної науки',
         'author' => 'Чарльз Вілан',
         'pages' => 320,
         'price' => 150.00,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Ліки від кохання та інші оповіді психотерапевта' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Ліки від кохання та інші оповіді психотерапевта',
         'author' => 'Ирвин Ялом',
         'pages' => 416,
         'price' => 89.90,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Думай і багатій' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Думай і багатій',
         'author' => 'Наполеон Хилл',
         'pages' => 256,
         'price' => 99.90,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Ніколи не їжте наодинці та інші секрети успіху завдяки широкому колу знайомств' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Ніколи не їжте наодинці та інші секрети успіху завдяки широкому колу знайомств',
         'author' => 'Кейт Феррацци',
         'pages' => 352,
         'price' => 125.00,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
-    'Як народжуються емоції' => [
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
+    [
+        'name' => 'Як народжуються емоції',
         'author' => 'Лиза Фельдман Барретт',
         'pages' => 480,
         'price' => 159.90,
-        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?'],
+        'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aspernatur eos eum illum nemo nisi suscipit velit voluptate voluptates?',
+        'bio' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eaque impedit perspiciatis tempora vero. Architecto commodi deserunt, ea earum ipsam laboriosam modi odio porro qui ratione, reiciendis tempora.'],
 ];

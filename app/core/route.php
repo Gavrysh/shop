@@ -13,15 +13,21 @@ class Route
     static function start()
     {
         //Route::errorPage404();
+        $controllerName = 'main';
+        $actionName = 'index';
 
         //Розбор строки
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
         //Ім'я контролера...
-        empty($routes[1]) ? $controllerName = 'main' : strtolower($controllerName = $routes[1]);
+        if (!empty($routes[1])) {
+            strtolower($controllerName = $routes[1]);
+        }
 
         //Ім'я дії...
-        empty($routes[2]) ? $actionName = 'index' : strtolower($actionName = $routes[2]);
+        if (!empty($routes[2])) {
+            strtolower($actionName = $routes[2]);
+        }
 
         //префікси...
         $modelName = 'model_'.$controllerName;
