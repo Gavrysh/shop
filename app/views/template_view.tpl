@@ -12,10 +12,6 @@
     </header>
     <body>
 
-        <!-- Modal form for authentication -->
-        <?php require_once './app/views/'.$auth_view; ?>
-        <!-- End Modal form for authentication -->
-
         <!-- Header content -->
         <?php require_once './app/views/'.$header_view; ?>
         <!-- End Header content -->

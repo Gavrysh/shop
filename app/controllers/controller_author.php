@@ -11,6 +11,6 @@ class controller_author extends controller
     {
         $id = explode('/', $_SERVER['REQUEST_URI']);
         $data = $this->model->get_id($id[3]);
-        $this->view->generate('author_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', 'auth_view.tpl', $data);
+        $this->view->generate('author_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', $data);
     }
 }
