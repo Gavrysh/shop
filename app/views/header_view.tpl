@@ -23,7 +23,7 @@
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampleModalCenter">Вход</a>
+                    <a class="nav-link disabled" href="/auth">Вход</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="/basket">Корзина</a>
