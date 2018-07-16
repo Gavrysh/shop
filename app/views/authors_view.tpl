@@ -5,7 +5,7 @@
         <div class="card-body">
             <h5 class="card-title"><?= $data[$key]['author']; ?></h5>
             <p class="card-text"><?= $data[$key]['bio']; ?></p>
-            <a href="/author" class="btn btn-primary">Подробнее</a>
+            <a href="/author/show/<?= $key; ?>" class="btn btn-primary">Подробнее</a>
         </div>
     </div>
     <?php } ?>

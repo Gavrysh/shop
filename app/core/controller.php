@@ -12,4 +12,8 @@ class controller {
     function action_index()
     {
     }
+
+    function action_select()
+    {
+    }
 }

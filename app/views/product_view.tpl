@@ -5,15 +5,16 @@
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/img/book.png" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title"><?='Name'?></h5>
-                    <p class="card-text">Краткое описание. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus blanditiis debitis eligendi error esse maxime nam nesciunt pariatur qui voluptatibus?</p>
+                    <h4 class="card-title"><?= $data['name']; ?></h4>
+                    <p class="card-text">Количество страниц - <?= $data['pages']; ?> стр.</p>
+                    <p class="card-text">Цена - <?= $data['price']; ?> грн.</p>
                     <a href="#" class="btn btn-primary float-left">Купить</a>
                 </div>
             </div>
         </div>
         <div class="col">
             <h3>Краткое содержание книги</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dicta dolorem dolorum error facilis harum inventore iusto laborum minima modi molestias nam obcaecati perferendis quia quo repellat saepe sequi, voluptatibus voluptatum. Cum cumque doloremque ipsam quod saepe tempore voluptatibus? Ad atque debitis delectus excepturi, facere labore nulla perspiciatis ullam.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto at cumque cupiditate dicta, eligendi error minima nisi, quod repudiandae sint suscipit tenetur. Asperiores blanditiis doloremque odio officia quidem reiciendis.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque aut beatae commodi consectetur cupiditate dolore facere harum impedit itaque labore laborum nam, nihil nostrum nulla obcaecati odit omnis, pariatur quaerat quia quod quos sit, tempora ut veniam vero voluptas voluptates! Aspernatur blanditiis culpa delectus deleniti ea, earum eligendi eum id ipsum laborum molestiae numquam omnis quod quos recusandae ullam unde vel. Atque cumque dicta eveniet explicabo fugit, in inventore omnis placeat qui, quo recusandae repellat voluptate!</p>
+            <p><?= $data['content']; ?></p>
         </div>
     </div>
     <div class="row">
@@ -27,7 +28,7 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <h3>Автор</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque eaque facilis inventore nihil, perspiciatis quia, quis repellat sequi similique veniam vitae voluptatum? Aliquam corporis doloremque ex magnam totam, veritatis! Ad animi asperiores atque dicta distinctio ducimus, error impedit iste, iure laudantium maiores molestiae nemo nostrum, quia quibusdam repudiandae sint tempora. Ab error nesciunt sint. Alias aperiam assumenda beatae blanditiis corporis debitis dicta dolor ea eius eligendi eos laboriosam modi nobis nulla officia quam quasi quod, rem sapiente ut. Atque consequuntur dignissimos iste minima odio quae sapiente. Alias aliquam autem cum cupiditate excepturi facere, labore officia placeat quae, quia sed.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem blanditiis culpa cupiditate doloribus eaque earum odio, reprehenderit? Ab dicta earum enim fugiat ipsum iusto maiores nam natus nesciunt numquam odit optio placeat, rerum soluta unde. Ab adipisci, at atque deserunt fugit itaque officiis quod tempora! Exercitationem maiores quis ut?</p>
+                <p><?= $data['author']; ?><br><?= $data['bio']; ?></p>
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <h3>Отзывы</h3>

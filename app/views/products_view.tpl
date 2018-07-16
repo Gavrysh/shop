@@ -8,8 +8,8 @@
                 <div class="card-body">
                     <h5 class="card-title"><?= $data[$key]['name']; ?></h5>
                     <p class="card-text"><?= $data[$key]['content']; ?></p>
-                    <a href="#" class="btn btn-primary float-left">Купить</a>
-                    <a href="/product/index?=<?= $key; ?>" class="btn btn-primary float-right">Подробнее</a>
+                    <a href="/products/select/<?= $key; ?>" class="btn btn-primary float-left">Купить</a>
+                    <a href="/product/show/<?= $key; ?>" class="btn btn-primary float-right">Подробнее</a>
                 </div>
             </div>
         </div>

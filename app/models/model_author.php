@@ -1,5 +1,5 @@
 <?php
-class Model_product extends Model
+class Model_author extends Model
 {
     public function get_id($id)
     {
