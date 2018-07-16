@@ -1,8 +1,15 @@
 <?php
 class controller_authors extends controller
 {
+    function __construct()
+    {
+        $this->model = new Model_authors();
+        $this->view = new View();
+    }
+
     public function action_index()
     {
-        $this->view->generate('authors_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', 'auth_view.tpl');
+        $data = $this->model->get_data();
+        $this->view->generate('authors_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', 'auth_view.tpl', $data);
     }
 }
