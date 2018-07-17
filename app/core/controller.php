@@ -13,7 +13,7 @@ class controller {
     {
     }
 
-    function action_select()
+    function action_show()
     {
     }
 }

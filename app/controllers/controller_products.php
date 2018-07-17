@@ -9,12 +9,14 @@ class controller_products extends controller
 
     function action_index()
     {
+        //Выборка всех книг из каталога
         $data = $this->model->get_data();
-        $this->view->generate('products_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', $data);
+        $this->view->generate('products_view.tpl', 'template_view.tpl', $data);
     }
 
     function action_select()
     {
+        //Выбор книги (отложить в корзину) - доработать
         session_start();
         $id = explode('/', $_SERVER['REQUEST_URI']);
         $this->action_index();

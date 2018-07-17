@@ -13,7 +13,7 @@
     <body>
 
         <!-- Header content -->
-        <?php require_once './app/views/'.$header_view; ?>
+        <?php require_once './app/views/header_view.tpl'; ?>
         <!-- End Header content -->
 
         <!-- Main container -->
@@ -25,7 +25,7 @@
         <!-- End Main container -->
 
         <!-- Footer content -->
-        <?php require_once './app/views/'.$footer_view; ?>
+        <?php require_once './app/views/footer_view.tpl'; ?>
         <!-- End Footer content -->
 
     </body>

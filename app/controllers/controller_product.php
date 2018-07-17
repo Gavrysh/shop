@@ -9,8 +9,9 @@ class controller_product extends controller
 
     function action_show()
     {
-        $id = explode('/', $_SERVER['REQUEST_URI']);
-        $data = $this->model->get_id($id[3]);
-        $this->view->generate('product_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', $data);
+        //Показ страницы отдельно-выбраной книги
+        $id = $_REQUEST['id'];
+        $data = $this->model->get_id($id);
+        $this->view->generate('product_view.tpl', 'template_view.tpl', $data);
     }
 }

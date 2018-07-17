@@ -1,6 +1,8 @@
 <?php
-return [
-    'DB_NAME' => 'main',
-    'DB_USER' => 'GaSeS',
-    'DB_PASS' => 'bdoZY3'
-]
+class core
+{
+    static $DB_LOCAL = 'localhost';
+    static $DB_NAME = 'main';
+    static $DB_LOGIN = 'GaSeS';
+    static $DB_PASS = 'bdoZY3';
+}

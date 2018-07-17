@@ -7,10 +7,11 @@ class controller_author extends controller
         $this->view = new View();
     }
 
-    public function action_show()
+    function action_show()
     {
-        $id = explode('/', $_SERVER['REQUEST_URI']);
-        $data = $this->model->get_id($id[3]);
-        $this->view->generate('author_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', $data);
+        //Показ страницы по отдельно-выбранному автору
+        $id = $_REQUEST['id'];
+        $data = $this->model->get_id($id);
+        $this->view->generate('author_view.tpl', 'template_view.tpl', $data);
     }
 }

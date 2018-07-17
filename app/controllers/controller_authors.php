@@ -9,7 +9,8 @@ class controller_authors extends controller
 
     public function action_index()
     {
+        //Выборка всех авторов
         $data = $this->model->get_data();
-        $this->view->generate('authors_view.tpl', 'template_view.tpl', 'footer_view.tpl', 'header_view.tpl', $data);
+        $this->view->generate('authors_view.tpl', 'template_view.tpl', $data);
     }
 }

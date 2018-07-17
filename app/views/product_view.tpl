@@ -5,16 +5,16 @@
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/img/book.png" alt="Card image cap">
                 <div class="card-body">
-                    <h4 class="card-title"><?= $data['name']; ?></h4>
-                    <p class="card-text">Количество страниц - <?= $data['pages']; ?> стр.</p>
-                    <p class="card-text">Цена - <?= $data['price']; ?> грн.</p>
+                    <h4 class="card-title"><?= $data[0]['name']; ?></h4>
+                    <p class="card-text">Количество страниц - <?= $data[0]['pages']; ?> стр.</p>
+                    <p class="card-text">Цена - <?= $data[0]['price']; ?> грн.</p>
                     <a href="#" class="btn btn-primary float-left">Купить</a>
                 </div>
             </div>
         </div>
         <div class="col">
             <h3>Краткое содержание книги</h3>
-            <p><?= $data['content']; ?></p>
+            <p><?= $data[0]['description']; ?></p>
         </div>
     </div>
     <div class="row">
@@ -28,7 +28,14 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <h3>Автор</h3>
-                <p><?= $data['author']; ?><br><?= $data['bio']; ?></p>
+                <p>
+                    <?php
+                        foreach ($data as $key => $val) {
+                    echo '<h4>'.$data[$key]['first_name'].' '.$data[$key]['first_name'].'</h4>';
+                    echo '<p>'.$data[$key]['bio'].'</p>';
+                        }
+                    ?>
+                </p>
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <h3>Отзывы</h3>
