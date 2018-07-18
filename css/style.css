@@ -14,3 +14,7 @@
 .img-404 {
     text-align: center;
 }
+.errorMessage {
+    font-size: 16px;
+    color: #b21f2d;
+}

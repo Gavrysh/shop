@@ -11,9 +11,11 @@ class controller_auth extends controller
     {
         if (isset($_POST['login'], $_POST['email'], $_POST['password'])) {
             $data = $this->model->get_data();
+        } else {
+            $data = null;
         }
-
-        $this->view->generate('auth_view.tpl', 'template_view.tpl');
+//wtf($data);
+        $this->view->generate('auth_view.tpl', 'template_view.tpl', $data);
     }
 
     function validLogin()

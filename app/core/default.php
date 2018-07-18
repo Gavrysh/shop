@@ -48,3 +48,10 @@ function hs($el) {
     }
     return $el;
 }
+
+//Шифрование паролей для хранения в БД
+function myHash ($var) {
+    $salt1 = 'DAYK';
+    $salt2 = 'DINGA';
+    return $var = crypt(md5($var.$salt1), $salt2);
+}
