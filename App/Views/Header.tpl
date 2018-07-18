@@ -10,10 +10,10 @@
                 <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/products">Каталог книг</a>
+                <a class="nav-link" href="/Products">Каталог книг</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/authors">Авторы книг</a>
+                <a class="nav-link" href="/Authors">Авторы книг</a>
             </li>
         </ul>
         <div class="my-2 my-lg-0 form-inline">
@@ -23,10 +23,10 @@
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/auth">Вход</a>
+                    <a class="nav-link disabled" href="/Auth">Вход</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/basket">Корзина</a>
+                    <a class="nav-link disabled" href="/Basket">Корзина</a>
                 </li>
             </ul>
         </div>

@@ -1,5 +1,10 @@
 <?php
-class controller_author extends controller
+
+namespace App\Controllers;
+
+use Core\Controller;
+
+class Author extends Controller
 {
     function __construct()
     {
@@ -12,6 +17,6 @@ class controller_author extends controller
         //Показ страницы по отдельно-выбранному автору
         $id = $_REQUEST['id'];
         $data = $this->model->get_id($id);
-        $this->view->generate('author_view.tpl', 'template_view.tpl', $data);
+        $this->view->generate('Author.tpl', 'Template.tpl', $data);
     }
 }

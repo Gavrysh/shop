@@ -1,5 +1,10 @@
 <?php
-class Model_auth extends Model
+
+namespace App\Models;
+
+use Core\Model;
+
+class Auth extends Model
 {
     public $errors = [];
 

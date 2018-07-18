@@ -1,0 +1,18 @@
+{
+    "name": "root/shop.local",
+    "description": "InternetShop",
+    "authors": [
+        {
+            "name": "GaSeS",
+            "email": "very.nice@ukr.net"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Core\\": "Core/"
+        }
+    }
+
+}

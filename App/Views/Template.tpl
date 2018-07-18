@@ -13,19 +13,19 @@
     <body>
 
         <!-- Header content -->
-        <?php require_once './app/views/header_view.tpl'; ?>
+        <?php require_once './App/Views/Header.tpl'; ?>
         <!-- End Header content -->
 
         <!-- Main container -->
         <div class="container">
             <div class="main-content">
-                <?php require_once './app/views/'.$content_view; ?>
+                <?php require_once './App/Views/'.$content_view; ?>
             </div>
         </div>
         <!-- End Main container -->
 
         <!-- Footer content -->
-        <?php require_once './app/views/footer_view.tpl'; ?>
+        <?php require_once './App/Views/Footer.tpl'; ?>
         <!-- End Footer content -->
 
     </body>

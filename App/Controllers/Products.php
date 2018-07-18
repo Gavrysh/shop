@@ -1,5 +1,10 @@
 <?php
-class controller_products extends controller
+
+namespace App\Controllers;
+
+use Core\Controller;
+
+class Products extends Controller
 {
     function __construct()
     {
@@ -11,7 +16,7 @@ class controller_products extends controller
     {
         //Выборка всех книг из каталога
         $data = $this->model->get_data();
-        $this->view->generate('products_view.tpl', 'template_view.tpl', $data);
+        $this->view->generate('Products.tpl', 'Template.tpl', $data);
     }
 
     function action_select()

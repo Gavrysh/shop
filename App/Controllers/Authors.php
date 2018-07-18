@@ -1,5 +1,10 @@
 <?php
-class controller_authors extends controller
+
+namespace App\Controllers;
+
+use Core\Controller;
+
+class Authors extends Controller
 {
     function __construct()
     {
@@ -11,6 +16,6 @@ class controller_authors extends controller
     {
         //Выборка всех авторов
         $data = $this->model->get_data();
-        $this->view->generate('authors_view.tpl', 'template_view.tpl', $data);
+        $this->view->generate('Authors.tpl', 'Template.tpl', $data);
     }
 }

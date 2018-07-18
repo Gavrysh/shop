@@ -1,5 +1,10 @@
 <?php
-class controller_product extends controller
+
+namespace App\Controllers;
+
+use Core\Controller;
+
+class Product extends Controller
 {
     function __construct()
     {
@@ -12,6 +17,6 @@ class controller_product extends controller
         //Показ страницы отдельно-выбраной книги
         $id = $_REQUEST['id'];
         $data = $this->model->get_id($id);
-        $this->view->generate('product_view.tpl', 'template_view.tpl', $data);
+        $this->view->generate('Product.tpl', 'Template.tpl', $data);
     }
 }

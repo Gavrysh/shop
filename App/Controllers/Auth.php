@@ -1,5 +1,10 @@
 <?php
-class controller_auth extends controller
+
+namespace App\Controllers;
+
+use Core\Controller;
+
+class Auth extends Controller
 {
     function __construct()
     {
@@ -14,8 +19,8 @@ class controller_auth extends controller
         } else {
             $data = null;
         }
-//wtf($data);
-        $this->view->generate('auth_view.tpl', 'template_view.tpl', $data);
+
+        $this->view->generate('Auth.tpl', 'Template.tpl', $data);
     }
 
     function validLogin()

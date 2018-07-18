@@ -1,5 +1,8 @@
 <?php
-class core
+
+namespace Core;
+
+class Data
 {
     static $DB_LOCAL = 'localhost';
     static $DB_NAME = 'main';

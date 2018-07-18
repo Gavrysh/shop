@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class Route
 {
     function errorPage404()
@@ -7,13 +9,13 @@ class Route
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');
         header('Status: 404 Not Found');
-        header('Location: '.$host.'404');
+        header('Location: '.$host.'Error_404');
     }
 
     static function start()
     {
         //Route::errorPage404();
-        $controllerName = 'main';
+        $controllerName = 'Main';
         $actionName = 'index';
 
         //Розбор строки
@@ -30,17 +32,17 @@ class Route
         }
 
         //префікси...
-        $modelName = 'model_'.$controllerName;
-        $controllerName = 'controller_'.$controllerName;
+        $modelName = $controllerName;
+        $controllerName = $controllerName;
         $actionName = 'action_'.$actionName;
 
         //додаємо файл із класом моделі (файл моделі може бути відсутній)
-        if (file_exists('./app/models/'.$modelName.'.php')) {
-            include './app/models/'.$modelName.'.php';
+        if (file_exists('./App/Models/'.$modelName.'.php')) {
+            include './App/Models/'.$modelName.'.php';
         }
 
         //додаємо файл із класом контролеру або генерація виключення
-        file_exists('./app/controllers/'.$controllerName.'.php') ? require_once './app/controllers/'.$controllerName.'.php' : Route::errorPage404();
+        file_exists('./App/Controllers/'.$controllerName.'.php') ? require_once './App/Controllers/'.$controllerName.'.php' : Route::errorPage404();
 
         //робимо екземпляр класу контролер
         $controller = new $controllerName;

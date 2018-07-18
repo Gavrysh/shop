@@ -1,4 +1,7 @@
 <?php
+
+namespace Core;
+
 class View
 {
     //public $template_view; // здесь можно указать общий вид по умолчанию.
@@ -12,6 +15,6 @@ class View
         }
         */
 
-        include './app/views/'.$template_view;
+        include './App/Views/'.$template_view;
     }
 }
