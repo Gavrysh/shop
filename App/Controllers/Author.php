@@ -12,11 +12,11 @@ class Author extends Controller
         parent::__construct();
     }
 
-    function action_show()
+    function actionShow()
     {
         //Показ страницы по отдельно-выбранному автору
         $id = $_REQUEST['id'];
-        $data = $this->model->get_id($id);
+        $data = $this->model->getId($id);
         $this->view->generate('Author.tpl', 'Template.tpl', $data);
     }
 }

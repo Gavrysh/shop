@@ -12,10 +12,10 @@ class Auth extends Controller
         parent::__construct();
     }
 
-    function action_index()
+    function actionIndex()
     {
         if (isset($_POST['login'], $_POST['email'], $_POST['password'])) {
-            $data = $this->model->get_data();
+            $data = $this->model->getData();
         } else {
             $data = null;
         }

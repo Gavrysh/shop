@@ -12,10 +12,10 @@ class Products extends Controller
         parent::__construct();
     }
 
-    function action_index()
+    function actionIndex()
     {
         //Выборка всех книг из каталога
-        $data = $this->model->get_data();
+        $data = $this->model->getData();
         $this->view->generate('Products.tpl', 'Template.tpl', $data);
     }
 
@@ -24,11 +24,11 @@ class Products extends Controller
         //Выбор книги (отложить в корзину) - доработать
         session_start();
         $id = explode('/', $_SERVER['REQUEST_URI']);
-        $this->action_index();
-        $this->add_goods($id[3]);
+        $this->actionIndex();
+        $this->addGoods($id[3]);
     }
 
-    function add_goods($id)
+    function addGoods($id)
     {
         $_SESSION['goods']['id'] = $id;
     }

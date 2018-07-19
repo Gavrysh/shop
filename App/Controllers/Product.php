@@ -12,11 +12,11 @@ class Product extends Controller
         parent::__construct();
     }
 
-    function action_show()
+    function actionShow()
     {
         //Показ страницы отдельно-выбраной книги
         $id = $_REQUEST['id'];
-        $data = $this->model->get_id($id);
+        $data = $this->model->getId($id);
         $this->view->generate('Product.tpl', 'Template.tpl', $data);
     }
 }

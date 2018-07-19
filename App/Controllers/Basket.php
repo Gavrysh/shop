@@ -6,7 +6,7 @@ use Core\Controller;
 
 class Basket extends Controller
 {
-    public function action_index()
+    public function actionIndex()
     {
         $this->view->generate('Basket.tpl', 'Template.tpl');
     }

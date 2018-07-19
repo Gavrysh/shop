@@ -9,7 +9,7 @@ class Auth extends Model
 {
     public $errors = [];
 
-    public function get_data()
+    public function getData()
     {
         //Коннект с базой и возврат данных по пользователю
         //если нет данных по пользователю - регистрация нового пользователя

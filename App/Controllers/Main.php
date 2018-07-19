@@ -6,7 +6,7 @@ use Core\Controller;
 
 class Main extends Controller
 {
-    public function action_index()
+    public function actionIndex()
     {
         $this->view->generate('Main.tpl', 'Template.tpl');
     }

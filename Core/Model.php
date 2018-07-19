@@ -7,7 +7,7 @@ class Model
     public $tableName;
     public $queryString;
 
-    public function get_data()
+    public function getData()
     {
         $res = Defaults::q("
             SELECT * FROM $this->tableName
@@ -20,7 +20,7 @@ class Model
         return $output;
     }
 
-    public function get_id($id)
+    public function getId($id)
     {
         $res = Defaults::q("
             $this->queryString $id

@@ -12,10 +12,10 @@ class Authors extends Controller
         parent::__construct();
     }
 
-    public function action_index()
+    public function actionIndex()
     {
         //Выборка всех авторов
-        $data = $this->model->get_data();
+        $data = $this->model->getData();
         $this->view->generate('Authors.tpl', 'Template.tpl', $data);
     }
 }
