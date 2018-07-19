@@ -23,7 +23,14 @@
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/Auth">Вход</a>
+                    <a class="nav-link disabled" href="
+                    <?php
+                        if (isset($_SESSION['user'])) {
+                          echo '/Logout">Выход';
+                        } else {
+                          echo '/Auth\">Вход';
+                        }
+                        ?></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="/Basket">Корзина</a>

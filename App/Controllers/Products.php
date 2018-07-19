@@ -22,7 +22,7 @@ class Products extends Controller
     function action_select()
     {
         //Выбор книги (отложить в корзину) - доработать
-        session_start();
+
         $id = explode('/', $_SERVER['REQUEST_URI']);
         $this->actionIndex();
         $this->addGoods($id[3]);

@@ -14,10 +14,9 @@ class Auth extends Model
         //Коннект с базой и возврат данных по пользователю
         //если нет данных по пользователю - регистрация нового пользователя
         //Проверка на корректность ввода
-        session_start();
         if ($this->validInput($_POST['email'], $_POST['password'])) {
             if ($this->searchUser($_POST['email'], $_POST['password'])) {
-                return $this->errors;
+                return true;
             } else {
                 if ($this->registerUser($_POST['email'], $_POST['password'])) {
                     $this->searchUser($_POST['email'], $_POST['password']);
