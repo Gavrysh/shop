@@ -6,7 +6,7 @@ use Core\Controller;
 
 class Authors extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->model = new \App\Models\Authors();
         parent::__construct();

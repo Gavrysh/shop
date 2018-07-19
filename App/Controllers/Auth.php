@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use Core\Controller;
-use Core\Defaults;
+//use Core\Defaults;
 use Core\Route;
 
 class Auth extends Controller
@@ -21,7 +21,11 @@ class Auth extends Controller
         } else {
             if (isset($_POST['login'], $_POST['email'], $_POST['password'])) {
                 $data = $this->model->getData();
-                $this->view->generate('Login.tpl', 'Template.tpl', $data);
+                if (gettype($data) == 'boolean') {
+                    $this->view->generate('Login.tpl', 'Template.tpl', $data);
+                } else {
+                    $this->view->generate('Auth.tpl', 'Template.tpl', $data);
+                }
             } else {
                 $this->view->generate('Auth.tpl', 'Template.tpl');
             }

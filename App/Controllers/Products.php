@@ -3,33 +3,27 @@
 namespace App\Controllers;
 
 use Core\Controller;
+//use Core\Defaults;
 
 class Products extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->model = new \App\Models\Products();
         parent::__construct();
     }
 
-    function actionIndex()
+    public function actionIndex()
     {
         //Выборка всех книг из каталога
         $data = $this->model->getData();
         $this->view->generate('Products.tpl', 'Template.tpl', $data);
     }
 
-    function action_select()
+    public function actionSelect()
     {
-        //Выбор книги (отложить в корзину) - доработать
-
-        $id = explode('/', $_SERVER['REQUEST_URI']);
-        $this->actionIndex();
-        $this->addGoods($id[3]);
-    }
-
-    function addGoods($id)
-    {
-        $_SESSION['goods']['id'] = $id;
+        //Выбор книги (отложить в корзину)
+        $this->model->putBasket($_REQUEST['id']);
+        $this->view->generate('Products.tpl', 'Template.tpl');
     }
 }

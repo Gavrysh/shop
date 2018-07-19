@@ -6,13 +6,13 @@ use Core\Controller;
 
 class Product extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->model = new \App\Models\Product();
         parent::__construct();
     }
 
-    function actionShow()
+    public function actionShow()
     {
         //Показ страницы отдельно-выбраной книги
         $id = $_REQUEST['id'];
