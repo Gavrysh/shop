@@ -8,8 +8,8 @@ class Authors extends Controller
 {
     function __construct()
     {
-        $this->model = new Model_authors();
-        $this->view = new View();
+        $this->model = new \App\Models\Authors();
+        parent::__construct();
     }
 
     public function action_index()

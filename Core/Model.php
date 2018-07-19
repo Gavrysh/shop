@@ -9,7 +9,7 @@ class Model
 
     public function get_data()
     {
-        $res = q("
+        $res = Defaults::q("
             SELECT * FROM $this->tableName
         ");
 
@@ -22,7 +22,7 @@ class Model
 
     public function get_id($id)
     {
-        $res = q("
+        $res = Defaults::q("
             $this->queryString $id
         ");
 

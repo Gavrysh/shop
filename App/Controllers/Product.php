@@ -8,8 +8,8 @@ class Product extends Controller
 {
     function __construct()
     {
-        $this->model = new Model_product();
-        $this->view = new View();
+        $this->model = new \App\Models\Product();
+        parent::__construct();
     }
 
     function action_show()

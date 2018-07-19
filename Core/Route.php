@@ -31,18 +31,18 @@ class Route
             strtolower($actionName = $routes[2]);
         }
 
-        //префікси...
-        $modelName = $controllerName;
-        $controllerName = $controllerName;
-        $actionName = 'action_'.$actionName;
-
         //додаємо файл із класом моделі (файл моделі може бути відсутній)
-        if (file_exists('./App/Models/'.$modelName.'.php')) {
-            include './App/Models/'.$modelName.'.php';
+        if (file_exists('./App/Models/'.$controllerName.'.php')) {
+            include './App/Models/'.$controllerName.'.php';
         }
 
         //додаємо файл із класом контролеру або генерація виключення
         file_exists('./App/Controllers/'.$controllerName.'.php') ? require_once './App/Controllers/'.$controllerName.'.php' : Route::errorPage404();
+
+        //префікси...
+        $modelName = '\\App\\Models\\'.$controllerName;
+        $controllerName = '\\App\\Controllers\\'.$controllerName;
+        $actionName = 'action_'.$actionName;
 
         //робимо екземпляр класу контролер
         $controller = new $controllerName;

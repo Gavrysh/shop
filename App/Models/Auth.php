@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Core\Defaults;
 use Core\Model;
 
 class Auth extends Model
@@ -47,11 +48,11 @@ class Auth extends Model
 
     public function searchUser($email, $pass)
     {
-        $res = q("
+        $res = Defaults::q("
             SELECT *
             FROM `users`
-            WHERE `email`  = '" . es($email) . "'
-            AND `password` = '" . es(myHash($pass)) . "'
+            WHERE `email`  = '".Defaults::es($email)."'
+            AND `password` = '".Defaults::es(Defaults::myHash($pass))."'
             LIMIT 1
         ");
 
@@ -65,10 +66,10 @@ class Auth extends Model
 
     public function validateUser($email)
     {
-        $res = q("
+        $res = Defaults::q("
             SELECT *
             FROM `users`
-            WHERE `email`  = '" . es($email) . "'
+            WHERE `email`  = '".Defaults::es($email)."'
         ");
 
         return mysqli_num_rows($res) ? true : false;
@@ -80,11 +81,11 @@ class Auth extends Model
             $this->errors['registerUser'] = 'Пользователь с таким email уже зарегистрирован. Выберите, пожалуйста другой email.';
             return false;
         } else {
-            q("
+            Defaults::q("
                 INSERT INTO `users` SET
-                `name`     = '".es($email)."',
-                `email`    = '".es($email)."',
-                `password` = '".es(myHash($pass))."'
+                `name`     = '".Defaults::es($email)."',
+                `email`    = '".Defaults::es($email)."',
+                `password` = '".Defaults::es(Defaults::myHash($pass))."'
             ");
             return true;
         }

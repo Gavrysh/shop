@@ -8,8 +8,8 @@ class Auth extends Controller
 {
     function __construct()
     {
-        $this->model = new Model_auth();
-        $this->view = new View();
+        $this->model = new \App\Models\Auth();
+        parent::__construct();
     }
 
     function action_index()

@@ -8,8 +8,8 @@ class Author extends Controller
 {
     function __construct()
     {
-        $this->model = new Model_author();
-        $this->view = new View();
+        $this->model = new \App\Models\Author();
+        parent::__construct();
     }
 
     function action_show()

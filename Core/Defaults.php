@@ -4,7 +4,7 @@ namespace Core;
 
 class Defaults
 {
-    function wtf($array, $load = 0)
+    public static function wtf($array, $load = 0)
     {
         echo '<pre>';
         print_r($array);
@@ -16,7 +16,7 @@ class Defaults
 
     // Функція оболонка від mysqli_query з розширеним функціоналом,
     // меншою кількістю вхідних параметрів, логіюванням у окремий файл
-    function q($query)
+    public static function q($query)
     {
         global $link;
         $res = mysqli_query($link, $query);
@@ -33,7 +33,7 @@ class Defaults
 
     // Екранує спец. символи для SQL-виразів
     // (працює з вкладеним масивом рекурсійно)
-    function es($el)
+    public static function es($el)
     {
         global $link;
         if (is_array($el)) {
@@ -46,7 +46,7 @@ class Defaults
 
     // Преобразує спец.символи до HTML-сутністі
     // (працює з вкладеним масивом рекурсійно)
-    function hs($el)
+    public static function hs($el)
     {
         if (is_array($el)) {
             $el = array_map(hs, $el);
@@ -57,7 +57,7 @@ class Defaults
     }
 
     //Шифрование паролей для хранения в БД
-    function myHash($var)
+    public static function myHash($var)
     {
         $salt1 = 'DAYK';
         $salt2 = 'DINGA';
