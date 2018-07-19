@@ -1,14 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+session_start();
 
-function wtf($array, $load = 0) {
-    echo '<pre>';
-    print_r($array);
-    echo '</pre>';
-    if (!$load) {
-        exit;
-    }
-}
-
-require_once './app/bootstrap.php';
+require_once './vendor/autoload.php';
+require_once './App/bootstrap.php';
