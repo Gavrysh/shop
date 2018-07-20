@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use Core\Controller;
-//use Core\Defaults;
 
 class Products extends Controller
 {
