@@ -14,33 +14,17 @@
             </tr>
             </thead>
             <tbody>
+            <?php foreach ($data as $key => $value): ?>
             <tr>
-                <th scope="row">1</th>
+                <th scope="row"><?= $key+1; ?></th>
                 <td></td>
-                <td>Mark</td>
-                <td>120.55</td>
-                <td>1</td>
+                <td><?= $value['name']; ?></td>
+                <td><?= $value['price']; ?></td>
+                <td><?= $value['amount']; ?></td>
                 <td>0.00</td>
-                <td>120.55</td>
+                <td><?= $value['sum']; ?></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td>Jacob</td>
-                <td>120.55</td>
-                <td>1</td>
-                <td>0.00</td>
-                <td>120.55</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td></td>
-                <td>Larry</td>
-                <td>120.55</td>
-                <td>1</td>
-                <td>0.00</td>
-                <td>120.55</td>
-            </tr>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>

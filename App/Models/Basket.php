@@ -41,14 +41,11 @@ class Basket extends Model
             $output[] = $row;
         }
 
-        foreach ($basket as $key => $val) {
-            if ($val > 1) {
-                $i = 0;
-                foreach ($output as $tey => $wal) {
-                    if ($output[$i]['id'] == $key) {
-                        $output[$i]['price'] = $output[$i]['price'] * $val;
-                    }
-                    ++$i;
+        foreach ($output as $key => &$value) {
+            foreach ($basket as $k => $v) {
+                if ($value['id'] == $k) {
+                    $value['amount'] = $v;
+                    $value['sum'] = $value['price'] * $v;
                 }
             }
         }
