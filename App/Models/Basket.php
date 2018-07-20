@@ -13,7 +13,7 @@ class Basket extends Model
             //Сгенерировать массив
             return $this->genDataForBasket();
         } else {
-            //Ничего не делать
+            return false;
         }
     }
 

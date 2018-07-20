@@ -19,4 +19,10 @@ class Product extends Controller
         $data = $this->model->getId($id);
         $this->view->generate('Product.tpl', 'Template.tpl', $data);
     }
+    public function actionSelectProduct()
+    {
+        //Выбор книги (отложить в корзину)
+        $this->model->putBasket($_REQUEST['id']);
+        $this->actionShow();
+    }
 }

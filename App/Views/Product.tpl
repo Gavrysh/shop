@@ -8,7 +8,7 @@
                     <h4 class="card-title"><?= $data[0]['name']; ?></h4>
                     <p class="card-text">Количество страниц - <?= $data[0]['pages']; ?> стр.</p>
                     <p class="card-text">Цена - <?= $data[0]['price']; ?> грн.</p>
-                    <a href="#" class="btn btn-primary float-left">Купить</a>
+                    <a href="/Product/SelectProduct/?id=<?= $_REQUEST['id']; ?>" class="btn btn-primary float-left">Купить</a>
                 </div>
             </div>
         </div>
@@ -31,8 +31,8 @@
                 <p>
                     <?php
                         foreach ($data as $key => $val) {
-                    echo '<h4>'.$data[$key]['first_name'].' '.$data[$key]['first_name'].'</h4>';
-                    echo '<p>'.$data[$key]['bio'].'</p>';
+                            echo '<h4>'.$data[$key]['first_name'].' '.$data[$key]['first_name'].'</h4>';
+                            echo '<p>'.$data[$key]['bio'].'</p>';
                         }
                     ?>
                 </p>

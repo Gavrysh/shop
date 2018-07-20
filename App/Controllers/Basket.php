@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use Core\Controller;
-//use Core\Defaults;
+use Core\Defaults;
 
 class Basket extends Controller
 {
@@ -18,5 +18,16 @@ class Basket extends Controller
         //Сформировать таблицу
         $data = $this->model->makeBasket();
         $this->view->generate('Basket.tpl', 'Template.tpl', $data);
+    }
+
+    public function actionClearBasket()
+    {
+        unset($_SESSION['books']);
+        $this->actionIndex();
+    }
+
+    public function actionRecountBasket()
+    {
+        Defaults::wtf($_SESSION,1);
     }
 }

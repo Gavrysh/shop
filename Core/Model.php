@@ -36,7 +36,5 @@ class Model
     public function putBasket($id)
     {
         $_SESSION['books'][] = $id;
-
-        Defaults::wtf($_SESSION);
     }
 }

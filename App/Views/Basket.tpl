@@ -1,32 +1,54 @@
 <!-- Main container -->
 <div class="container">
     <div class="row">
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">img</th>
-                <th scope="col">Наименование товара</th>
-                <th scope="col">Цена</th>
-                <th scope="col">Количество</th>
-                <th scope="col">Скидка</th>
-                <th scope="col">Сумма</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($data as $key => $value): ?>
-            <tr>
-                <th scope="row"><?= $key+1; ?></th>
-                <td></td>
-                <td><?= $value['name']; ?></td>
-                <td><?= $value['price']; ?></td>
-                <td><?= $value['amount']; ?></td>
-                <td>0.00</td>
-                <td><?= $value['sum']; ?></td>
-            </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
+        <?php
+            if (gettype($data) == 'boolean') { ?>
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Корзина пуста!</h4>
+                    <p>Для добавления товаров в корзину - необходимо перейти на страницу с товарами. Добавленный товар можно будет заказать на этой странице.</p>
+                    <hr>
+                    <p class="mb-0">Удачного выбора.</p>
+                </div>
+        <?php
+            } else { ?>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">img</th>
+                        <th scope="col">Наименование товара</th>
+                        <th scope="col">Цена</th>
+                        <th scope="col">Количество</th>
+                        <th scope="col">Скидка</th>
+                        <th scope="col">Сумма</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        foreach ($data as $key => $value): ?>
+                            <tr>
+                                <th scope="row"><?= $key+1; ?></th>
+                                <td></td>
+                                <td><?= $value['name']; ?></td>
+                                <td><?= $value['price']; ?></td>
+                                <td><?= $value['amount']; ?></td>
+                                <td>0.00</td>
+                                <td><?= $value['sum']; ?></td>
+                            </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <div>
+                    <form method="post" action="/Basket/ClearBasket">
+                        <input type="submit" class="btnClearBasket" name="clearBasket" value="Очистить корзину">
+                    </form>
+                </div>
+                <div>
+                    <form method="post" action="/Basket/RecountBasket">
+                        <input type="submit" class="btnRecountBasket" name="RecountBasket" value="Пересчитать товары">
+                    </form>
+                </div>
+            <?php } ?>
     </div>
     <div class="row">
         <div class="col">
@@ -61,7 +83,7 @@
             </div>
         </div>
         <div class="col">
-            <h3>Інформация про оплату:</h3>
+            <h3>Информация про оплату:</h3>
             <p>Цена товаров</p>
             <p>Цена доставки</p>
             <p>Скидка</p>
