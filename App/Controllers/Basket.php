@@ -15,8 +15,8 @@ class Basket extends Controller
 
     public function actionIndex()
     {
-        //Сформировать таблицу
-        $data = $this->model->makeBasket();
+        //Сформировать таблицу если были выбраны товары
+        $data = $this->actionMakingBasket();
         $this->view->generate('Basket.tpl', 'Template.tpl', $data);
     }
 
@@ -29,5 +29,10 @@ class Basket extends Controller
     public function actionRecountBasket()
     {
         Defaults::wtf($_SESSION,1);
+    }
+
+    public function actionMakingBasket()
+    {
+        return $this->model->makeBasket();
     }
 }
