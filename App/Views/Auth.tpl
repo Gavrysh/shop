@@ -21,5 +21,4 @@
     </div>
     <button type="submit" class="btn btn-primary" name="login">Подтвердить</button>
 </form>
-<?php \Core\Defaults::wtf($_SESSION, 1); ?>
 <!-- End form for login -->

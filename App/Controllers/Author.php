@@ -6,13 +6,13 @@ use Core\Controller;
 
 class Author extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->model = new \App\Models\Author();
         parent::__construct();
     }
 
-    function actionShow()
+    public function actionShow()
     {
         //Показ страницы по отдельно-выбранному автору
         $id = $_REQUEST['id'];

@@ -6,30 +6,23 @@ use Core\Controller;
 
 class Products extends Controller
 {
-    function __construct()
+    public function __construct()
     {
         $this->model = new \App\Models\Products();
         parent::__construct();
     }
 
-    function actionIndex()
+    public function actionIndex()
     {
         //Выборка всех книг из каталога
         $data = $this->model->getData();
         $this->view->generate('Products.tpl', 'Template.tpl', $data);
     }
 
-    function action_select()
+    public function actionSelectProducts()
     {
-        //Выбор книги (отложить в корзину) - доработать
-
-        $id = explode('/', $_SERVER['REQUEST_URI']);
+        //Выбор книги (отложить в корзину)
+        $this->model->putBasket($_REQUEST['id']);
         $this->actionIndex();
-        $this->addGoods($id[3]);
-    }
-
-    function addGoods($id)
-    {
-        $_SESSION['goods']['id'] = $id;
     }
 }

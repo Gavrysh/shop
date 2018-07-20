@@ -32,4 +32,9 @@ class Model
 
         return $output;
     }
+
+    public function putBasket($id)
+    {
+        $_SESSION['books'][] = $id;
+    }
 }

@@ -7,12 +7,15 @@
             "email": "very.nice@ukr.net"
         }
     ],
-    "require": {},
+    "require": {
+    },
     "autoload": {
         "psr-4": {
             "App\\": "App/",
             "Core\\": "Core/"
         }
+    },
+    "require-dev": {
+        "monolog/monolog": "^1.23"
     }
-
 }
