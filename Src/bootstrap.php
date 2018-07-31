@@ -1,6 +1,6 @@
 <?php
 
-use Core\Data;
+use Config\Data;
 use Core\Route;
 
 //Инициализация подключения к БД

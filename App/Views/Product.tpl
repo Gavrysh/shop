@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/img/book.png" alt="Card image cap">
+                <img class="card-img-top" src="/Public/img/book.png" alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title"><?= $data[0]['name']; ?></h4>
                     <p class="card-text">Количество страниц - <?= $data[0]['pages']; ?> стр.</p>
