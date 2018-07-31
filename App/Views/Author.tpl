@@ -9,7 +9,7 @@
     </div>
     <div class="col">
         <h3>Биография</h3>
-        <p><?= $data[0]['bio']; ?></p>
+        <p><?= $data[0]['biography']; ?></p>
     </div>
 </div>
 <h3>Отзывы читателей</h3>
@@ -30,7 +30,7 @@
         <?php
             foreach ($data as $key => $val) {
                 echo '<h6>'.$data[$key]['name'].'</h6>';
-                echo '<p>'.$data[$key]['description'].'</p>';
+                echo '<p>'.$data[$key]['content'].'</p>';
             }
         ?>
         <p>

@@ -4,7 +4,7 @@
         <img class="card-img-top" src="/img/author.jpg" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title"><?= $data[$key]['first_name'].' '.$data[$key]['last_name']; ?></h5>
-            <p class="card-text"><?= $data[$key]['bio']; ?></p>
+            <p class="card-text"><?= $data[$key]['biography']; ?></p>
             <a href="/Author/Show/?id=<?= $data[$key]['id']; ?>" class="btn btn-primary">Подробнее</a>
         </div>
     </div>

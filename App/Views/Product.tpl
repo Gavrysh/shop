@@ -14,7 +14,7 @@
         </div>
         <div class="col">
             <h3>Краткое содержание книги</h3>
-            <p><?= $data[0]['description']; ?></p>
+            <p><?= $data[0]['content']; ?></p>
         </div>
     </div>
     <div class="row">
@@ -32,7 +32,7 @@
                     <?php
                         foreach ($data as $key => $val) {
                             echo '<h4>'.$data[$key]['first_name'].' '.$data[$key]['first_name'].'</h4>';
-                            echo '<p>'.$data[$key]['bio'].'</p>';
+                            echo '<p>'.$data[$key]['biography'].'</p>';
                         }
                     ?>
                 </p>
