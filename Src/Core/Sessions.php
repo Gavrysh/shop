@@ -50,8 +50,7 @@ class Sessions
         return $this->name;
     }
 
-    //Установить имя сессии,
-    //если уже существует сессиия - кинуть исключение
+    //Установить имя сессии
     public function setName($name)
     {
         if ($this->sessionExist()) {
@@ -75,6 +74,7 @@ class Sessions
         }
     }
 
+    //Взять путь где хранятся идентификаторьі сессии
     public function getSavePath()
     {
         return $this->path;
