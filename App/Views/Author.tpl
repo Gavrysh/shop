@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/Public/img/author.jpg" alt="Card image cap">
+            <img class="card-img-top" src="/img/author.jpg" alt="Card image cap">
             <div class="card-body">
                 <p class="card-text"><?= $data[0]['first_name'].' '.$data[0]['last_name']; ?></p>
             </div>

@@ -4,7 +4,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="/"><img src="/Public/img/logo_s.png"></a>
+        <a class="navbar-brand" href="/"><img src="/img/logo_s.png"></a>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
