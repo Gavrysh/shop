@@ -9,8 +9,8 @@ class Basket extends Controller
 {
     public function __construct()
     {
-        $this->model = new \App\Models\Basket();
         parent::__construct();
+        $this->model = new \App\Models\Basket();
     }
 
     public function actionIndex()

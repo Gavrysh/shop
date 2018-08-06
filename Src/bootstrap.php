@@ -6,6 +6,7 @@ use Core\Sessions;
 use Core\ErrorHandler;
 
 $session = new Sessions();
+$session->start();
 
 $errors = new ErrorHandler();
 $errors->registerError();

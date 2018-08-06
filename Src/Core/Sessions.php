@@ -24,8 +24,8 @@ class Sessions
             if (!session_start()) {
                 throw new \Exception('Ошибка создания сессии.');
             }
-            $_SESSION['user'] = $_SERVER['HTTP_USER_AGENT'];
-            $_SESSION['r_addr'] = $_SERVER['REMOTE_ADDR'];
+            //$_SESSION['user'] = $_SERVER['HTTP_USER_AGENT'];
+            //$_SESSION['r_addr'] = $_SERVER['REMOTE_ADDR'];
         }
     }
 
