@@ -11,8 +11,9 @@
     },
     "autoload": {
         "psr-4": {
+            "Config\\": "App/Config/",
             "App\\": "App/",
-            "Core\\": "Core/"
+            "Core\\": "Src/Core/"
         }
     },
     "require-dev": {

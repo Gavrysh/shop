@@ -24,7 +24,7 @@ class Defaults
             $info = debug_backtrace();
             $error_log = strip_tags("Дата/час - " . date('d:m:y - H:i:s') . "<br>\n" . "Помилка у файлі - " . $info[0]['file'] . "<br>\n" . "Рядок - " . $info[0]['line'] . "<br>\n" . "Запит - ") . htmlspecialchars($query) . strip_tags("<br>\n" . "Помилка mysqli - " . mysqli_error($link) . "<br>\n");
             echo "Дата/час - " . date('d:m:y - H:i:s') . "<br>\n" . "Помилка у файлі - " . $info[0]['file'] . "<br>\n" . "Рядок - " . $info[0]['line'] . "<br>\n" . "Запит - " . htmlspecialchars($query) . "<br>\n" . "Помилка mysqli - " . mysqli_error($link) . "<br>\n";
-            file_put_contents('./logs/mysql.log', htmlspecialchars_decode($error_log) . "\n\n", FILE_APPEND);
+            file_put_contents('./App/Logs/mysql.log', htmlspecialchars_decode($error_log) . "\n\n", FILE_APPEND);
             exit();
         } else {
             return $res;

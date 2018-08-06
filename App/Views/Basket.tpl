@@ -64,12 +64,12 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <p><label>Контактный номер телефона<br><input type="text" name="phone"></label></p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam animi dolore, doloribus illum incidunt ipsam iure nam neque nesciunt nihil perferendis repellat sit! Ducimus enim et harum inventore ipsum molestias necessitatibus numquam tempore. Amet architecto assumenda doloremque ducimus esse excepturi explicabo illum, incidunt maxime, minus nemo neque pariatur unde?</p>
-                    <form>
+                    <form action="" method="post">
                         <input type="submit" name="submit" value="Подтвердить">
                     </form>
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <form>
+                    <form action="" method="post">
                         <p><label>Имя<br><input type="text" name="firstname"></label></p>
                         <p><label>Фамилия<br><input type="text" name="lastname"></label></p>
                         <p><label>Телефон<br><input type="text" name="phone"></label></p>
@@ -88,7 +88,7 @@
             <p>Цена доставки</p>
             <p>Скидка</p>
             <p>Общая сумма</p>
-            <form>
+            <form action="" method="post">
                 <input type="submit" value="Оформить заказ">
             </form>
         </div>

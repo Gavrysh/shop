@@ -4,57 +4,56 @@ namespace Core;
 
 class Route
 {
-    public function errorPage404()
+    public function errorPage()
     {
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');
         header('Status: 404 Not Found');
-        header('Location: '.$host.'Error_404');
+        header('Location: '.$host.'ErrorPage');
     }
 
-    public static function start()
+    public function start()
     {
-        //Route::errorPage404();
         $controllerName = 'Main';
         $actionName = 'Index';
 
-        //Розбор строки
+        //Разбор строки
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
-        //Ім'я контролера...
+        //Имя контроллера...
         if (!empty($routes[1])) {
             strtolower($controllerName = $routes[1]);
         }
 
-        //Ім'я дії...
+        //Имя действия
         if (!empty($routes[2])) {
             strtolower($actionName = $routes[2]);
         }
 
-        //додаємо файл із класом моделі (файл моделі може бути відсутній)
+        //Добавление файла с классом модели (файл модели может отсутствовать)
         if (file_exists('./App/Models/'.$controllerName.'.php')) {
             include './App/Models/' . $controllerName . '.php';
         }
 
-        //додаємо файл із класом контролеру або генерація виключення
+        //Добавление файла с классом контроллера или генерирование исключения
         if (file_exists('./App/Controllers/'.$controllerName.'.php')) {
             require_once './App/Controllers/' . $controllerName . '.php';
         }
         else {
-            Route::errorPage404();
+            $this->errorPage();
         }
 
-        //префікси...
+        //Префикс
         $modelName = '\\App\\Models\\'.$controllerName;
         $controllerName = '\\App\\Controllers\\'.$controllerName;
         $actionName = 'action'.$actionName;
 
-        //робимо екземпляр класу контролер
+        //Создаем екземпляр класса контроллер
         $controller = new $controllerName;
         $action = $actionName;
 
-        //визвано дію контролера або тут теж можна виключення організувати
-        method_exists($controller, $action) ? $controller->$action() : Route::errorPage404();
+        //Вьізвать действие контроллера или отослать на 404
+        method_exists($controller, $action) ? $controller->$action() : $this->errorPage();
     }
 
 }

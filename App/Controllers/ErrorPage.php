@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use Core\Controller;
 
-class Error_404 extends Controller
+class ErrorPage extends Controller
 {
     public function actionIndex()
     {
-        $this->view->generate('Error_404.tpl', 'Template.tpl');
+        $this->view->generate('ErrorPage.tpl', 'Template.tpl');
     }
 }
